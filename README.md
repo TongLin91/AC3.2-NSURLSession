@@ -9,6 +9,11 @@
 5. [Concurrency - Objc.io](https://www.objc.io/issues/2-concurrency/concurrency-apis-and-pitfalls/)
 6. [Concurrency’s relation to Async Network requests (scroll down)](https://www.objc.io/issues/2-concurrency/common-background-practices/)
 7. [Great talk on networking - Objc.io](https://talk.objc.io/episodes/S01E01-networking) (a bit advanced! uses flatmap, generics, computed properties and closure as properties) 
+8. [Singletons in Swift - Thomas Hanning](http://www.thomashanning.com/singletons-in-swift/)
+
+#### Further Reading in Singletons (read the above one first though):
+1. [Singletons - That Thing in Swift](https://thatthinginswift.com/singletons/)
+2. [The Right Way to Write a Singleton - krakendev](http://krakendev.io/blog/the-right-way-to-write-a-singleton) (gives a nice short history of writing singletons in objc and swift. then shows you how/why they are truly "single". This blog in general is a really good resource worth bookmarking)
 
 ### Reference:
 2. [`URL` - Apple](https://developer.apple.com/reference/foundation/url) 
