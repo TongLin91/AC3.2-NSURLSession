@@ -94,3 +94,60 @@ class InstaCatFactory {
     }
     
 }
+
+
+
+class InstaDogFactory{
+    static let manager: InstaDogFactory = InstaDogFactory()
+    private init() {}
+    
+    class func makeInstaDogs(apiEndpoint: String, callback: @escaping ([InstaDog]?) -> Void){
+        if let instaDogsURL: URL = URL(string: apiEndpoint){
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            session.dataTask(with: instaDogsURL){ (data: Data?, response: URLResponse?, error: Error?) in
+                if error != nil{
+                    print(error!)
+                }
+                
+                if let dogsData: Data = data {
+                    print(dogsData)
+                    if let instaDog: [InstaDog] = InstaDogFactory.manager.getInstaDogs(from: dogsData){
+                        dump(instaDog)
+                        callback(instaDog)
+                    }
+                }
+            }.resume()
+        }
+    }
+
+    internal func getInstaDogs(from jsonData: Data) -> [InstaDog]?{
+        do {
+            let instaDogData: Any = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            
+            guard let instaDogCasted: [String: AnyObject] = instaDogData as? [String: AnyObject],
+                let instaDogArr: [AnyObject] = instaDogCasted["dogs"] as? [AnyObject] else {
+                return nil
+            }
+            
+            var instaDogs: [InstaDog] = []
+            instaDogArr.forEach({ instaDogObject in
+                guard let id: String = instaDogObject["dog_id"] as? String,
+                    let name: String = instaDogObject["name"] as? String,
+                    let instagram: String = instaDogObject["instagram"] as? String,
+                    let imageName: String = instaDogObject["imageName"] as? String,
+                    let stats: [String: Any] = instaDogObject["stats"] as? [String: Any],
+                    let followers: String = stats["followers"] as? String,
+                    let following: String = stats["following"] as? String,
+                    let posts: String = stats["posts"] as? String else{
+                    return
+                }
+                
+                instaDogs.append(InstaDog(id: id, name: name, instagram: instagram, imageName: imageName, follower: followers, following: following, posts: posts))
+            })
+            return instaDogs
+        } catch let error as NSError {
+            print(error)
+        }
+        return nil
+    }
+}

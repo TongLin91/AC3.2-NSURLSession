@@ -19,6 +19,7 @@
 		14CBA2F21DADA69F003A33FD /* InstaCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA2F11DADA69F003A33FD /* InstaCat.swift */; };
 		14CBA2F31DADA69F003A33FD /* InstaCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA2F11DADA69F003A33FD /* InstaCat.swift */; };
 		14CBA2F61DADA9FC003A33FD /* InstaCatFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA2F51DADA9FC003A33FD /* InstaCatFactory.swift */; };
+		ED27F7A11DBFA8BB0025D269 /* InstaDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27F7A01DBFA8BB0025D269 /* InstaDog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		14CBA2EE1DADA2EE003A33FD /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = test.json; path = "AC3.2-InstaCats-2Tests/test.json"; sourceTree = SOURCE_ROOT; };
 		14CBA2F11DADA69F003A33FD /* InstaCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstaCat.swift; path = "AC3.2-InstaCats-2/Model/InstaCat.swift"; sourceTree = SOURCE_ROOT; };
 		14CBA2F51DADA9FC003A33FD /* InstaCatFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstaCatFactory.swift; path = "AC3.2-InstaCats-2/InstaCatFactory.swift"; sourceTree = SOURCE_ROOT; };
+		ED27F7A01DBFA8BB0025D269 /* InstaDog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaDog.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				14CBA2F11DADA69F003A33FD /* InstaCat.swift */,
+				ED27F7A01DBFA8BB0025D269 /* InstaDog.swift */,
 				14CBA2F51DADA9FC003A33FD /* InstaCatFactory.swift */,
 			);
 			name = Model;
@@ -249,6 +252,7 @@
 				14CBA2F21DADA69F003A33FD /* InstaCat.swift in Sources */,
 				14CBA2DB1DADA28C003A33FD /* AppDelegate.swift in Sources */,
 				14CBA2F61DADA9FC003A33FD /* InstaCatFactory.swift in Sources */,
+				ED27F7A11DBFA8BB0025D269 /* InstaDog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/AC3.2-InstaCats-2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nyc.AccessCode.AC3-2-InstaCats-2";
@@ -401,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/AC3.2-InstaCats-2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nyc.AccessCode.AC3-2-InstaCats-2";
